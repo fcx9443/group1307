@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+<title>Reflections - Assignment 3 - COMP501 - Group Website</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Website Styling -->
+<style>
+	* {
+	box-sizing: border-box;
+	}
+	
+	h1, h2, h3, h4{
+	text-align: center; 
+	color: white;
+	}
+	
+	h5 {
+	color: white;
+	text-align: left;
+	padding-left:10px
+	}
+	
+	p{
+	color: white;
+	text-align: center;
+	}
+
+	body {
+	 background-color: #130036;
+	 max-width: 1200px;
+	 margin: auto;
+	 font-family: ;
+	}
+	<!--Nav style-->
+	.navagation {
+	  overflow: hidden;
+	}
+
+	.navagation a {
+	  float: left;
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding-left: 15px;
+	  padding-right: 15px;
+	  padding-top: 15px;
+	  padding-bottom: 10px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  border-bottom: 3px solid transparent;
+	}
+
+	.navagation a:hover {
+	  border-bottom: 3px solid #233600;
+	}
+
+	.navagation a.active {
+	  border-bottom: 3px solid #233600;
+	}
+	
+	<!-- Tabs/Sections-->
+
+	.tab button:hover {
+	  border-bottom: 3px solid #233600;
+	}
+
+	.tab button.active {
+	  border-bottom: 3px solid #233600;
+	}
+	
+	.tabcontent {
+	  border-radius: 10px; 
+	  display: none;
+	  background: #EEEDED;
+	  color: black;
+	  padding: 6px 12px;
+	  border: 3px solid #233600;
+	}
+	
+</style>
+ 
+<body>
+	<h1>Computing Technology in Society (COMP501) | Assignment 3 
+	<br><br>
+	Reflections</h1>
+	<!--Navagation-->
+	<div class="navagation">
+	  <a href="index.html">Home</a> 
+	  <br><br><br><br>
+	  <a class="tablinks" onclick="opentab(event, 'Thomas')">Reflection - Thomas</a>
+	  <a class="tablinks" onclick="opentab(event, 'Gregory')">Reflection - Gregory</a>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	
+	<!--Tab Content-->
+	<div id="Thomas" class="tabcontent">
+	  <h2 style="color:#233600">Reflection - Thomas</h2>
+	  <p style="color:black">Thomas's Reflection</p>
+	</div>
+
+	<div id="Gregory" class="tabcontent">
+	  <h2 style="color:#233600">Reflection - Gregory</h2>
+	  <p style="color:black">Gregory's Reflection.</p> 
+	</div>
+	
+	<br>
+	<br>
+	
+	<!-- Footer -->
+	<hr>
+	<p>Thomas Brears (#20122554) | Gregory Doo (#20113186) <br><br></p>
+	<p>© <script> 
+			var CurrentYear = new Date().getFullYear() 
+			document.write(CurrentYear) 
+		  </script> Thomas Brears & Gregory Doo | Auckland University of Technology Students </p>
+</body>
+
+<script>
+function opentab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
